@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Цена на услуги {% endblock %}
+
+
+{% block content %}
+<div class="">
+    <h3>Услуги</h3>
+
+    <table class="table table-striped">
+        <tr>
+            <th>п/н</th>
+            <th>Название услуги</th>
+            <th>Стоимость, руб.</th>
+        </tr>
+
+        {% for item in object_list %}
+
+
+        <tr>
+            <td>{{item.number}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

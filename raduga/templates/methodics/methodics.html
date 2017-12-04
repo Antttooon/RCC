@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="col-md-12 text-center">
+
+        <h1>  {{meth.name}} </h1>
+        {% if meth.img %}
+
+        <div class="row">
+            <div class="col-md-5">
+                {{meth.desc}}
+            </div>
+            <div class="col-md-7">
+                <img class="img-responsive" src="{{meth.img.url}}" alt="">
+            </div>
+
+        </div>
+        {% else %}
+
+        <p> {{meth.desc}}  </p>
+        {% endif %}
+
+
+
+        {% if meth.price %}
+        <h4>Стоимость: {{meth.price}} руб </h4>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

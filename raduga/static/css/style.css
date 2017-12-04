@@ -1,0 +1,116 @@
+body{
+    background: #fdfaf9;
+
+}
+
+
+
+.navbar-default{
+    background-color: #d6c6b6;
+    border-color: #e7e7e7;
+    height:71px;
+    z-index:2;
+}
+
+.open .dropdown-menu {
+    z-index:1;
+    background: #f3eeee!important;
+
+}
+
+.navbar-brand {
+    padding:5px 0 0 10px;
+    width: 130px;
+}
+
+
+.navbar-collapse{
+    padding-top:14px;
+
+}
+.navbar-default .navbar-nav>li>a {
+    color: #3a2f26;
+    background:#d7c6b6;
+    border: none;
+    }
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+
+    background:#e8dbcf;
+
+}
+
+
+.content{
+    min-height: 700px;
+    width:60%;
+    margin: 0 auto;
+    background:#fdfaf9;
+    }
+
+.news{
+    width:100%;
+    margin: 0 auto;
+}
+
+.news .carousel{
+    heigeht:381px;
+}
+
+.news_text{
+    background: #1d1d1da3;
+}
+.carousel-indicators{
+    bottom:0;
+}
+
+/*  SPECIALISTS ================================   */
+
+.spec{
+    min-height:100px;
+    height:400px;
+    overflow:hidden;
+    margin-bottom: 15px;
+}
+
+
+
+.carousel-inner{
+
+}
+
+.social a{
+display:block;
+margin:5px;
+}
+
+.social {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+}
+
+.footer{
+    display:block;
+    position: relative;
+    margin-top:20px;
+    height: 80px;
+    background: #f3eeee;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        border-color:#d8c6b6;
+    }
+
+    .navbar-nav{
+        margin-top:0;
+    }
+    .content{
+        width:90%;
+    }
+
+}

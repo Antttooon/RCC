@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="col-md-12 text-center">
+        <h3> Консультация специалиста</h3>
+        <h2>  {{cons.specialist.name}} </h2>
+            <h4>( {{ cons.specialist.desc_short }} )</h4>
+        <br>
+
+        <p> {{cons.desc}}  </p>
+        <br>
+
+        {% if cons.price %}
+        <h3>Стоимость: {{cons.price}} руб </h3>
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}
