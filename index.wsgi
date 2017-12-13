@@ -9,7 +9,7 @@ import signal
 activate_this = '/home/a/anttoonru/myvenv/bin/activate_this.py'
 #exec(compile(activate_this, dict(__file__=activate_this)))
 site.addsitedir('/home/a/anttoonru/myvenv/lib/python3.4/site-packages')
-sys.path.insert(1,'/home/a/anttoonru/ALPHATRADETOBACCO.com/alpha/')
+sys.path.insert(1,'/home/a/anttoonru/ALPHATRADETOBACCO.com/RCC/')
 
 import django
 
