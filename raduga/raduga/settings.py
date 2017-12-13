@@ -25,7 +25,7 @@ SECRET_KEY = '8imiv!yl^i5agg%!pz5q^@nmliipl1ek5^zisls&e*k!yc1qi2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://testrcc.ru.fstest.ru','127.0.0.1']
+ALLOWED_HOSTS = ['testrcc.ru.fstest.ru','127.0.0.1']
 
 
 # Application definition
