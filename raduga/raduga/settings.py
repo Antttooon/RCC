@@ -37,12 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sorl.thumbnail',
+
+    'ckeditor',
+    'ckeditor_uploader',
 
     'portal',
     'specialist',
     'methodics',
     'price',
-
 
 ]
 
@@ -139,3 +142,4 @@ MEDIA_URL = '/media/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+CKEDITOR_UPLOAD_PATH = 'uploads/'

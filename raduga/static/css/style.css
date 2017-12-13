@@ -73,6 +73,14 @@ body{
     margin-bottom: 15px;
 }
 
+.elem{
+    text-align: center;
+    height:250px;
+}
+
+.elem p{
+    margin-bottom:0;
+}
 
 
 .carousel-inner{

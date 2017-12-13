@@ -27,9 +27,11 @@ urlpatterns = [
     url(r'^consultation/(?P<pk>\d+)/$', ConsultationDetail.as_view(), name='consultation'),
     url(r'^methodics/(?P<pk>\d+)/$', MethodicDetail.as_view(), name='methodics'),
     url(r'^price/', Price.as_view(), name='price'),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 
-]
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 if settings.DEBUG:

@@ -1,18 +1,79 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
+
 
 {% block title %} {{ title }} {% endblock %}
 {% block content %}
     <!--<div class="container">-->
     {% for spec in specialists %}
-    
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 spec text-center">
-        <img src="{{ spec.image.url }}" class="img-responsive" alt="">
-        <h3>{{spec.name}}</h3>
-        <h4>{{ spec.desc_short }}</h4>
-        <p>{{ spec.desc }}</p>
+        <div class="col-md-4 col-sm-4 col-xs-6 elem">
+            <a href="javascript:void(0)" class=" modal-open" data-toggle="modal" data-target="#myModal">
 
-    </div>
+                {% thumbnail spec.image "150x150" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                {% endthumbnail %}
+                 <p class="partner-text text-center"> {{spec.name}}</p>
+                 <p class="partner-text text-center">{{ spec.desc_short }} </p>
+
+                <p class="partner-text hidden"> {{spec.name}} -  {{ spec.desc_short }} </p>
+                <p class="partner-info-short hidden"> {{ spec.desc_short }}</p>
+                <p class="partner-info hidden"> {{ spec.desc }}</p>
+                <p class="partner-photo hidden"> {{ spec.image.url }}</p>
+            </a>
+        </div>
+    
+
     {% endfor %}
     <!--</div>-->
 
+     <!--MODALS-->
+    <div class="modal fade modal-m partner-modal" tabindex="-1" role="dialog" id="modal-contacts">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <!--<h4 class="modal-title">Modal title</h4>-->
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="modal-photo-wrap text-center">
+
+                     <img src="" alt="" class="modalPhoto" width="200"/>
+
+
+
+                    </div>
+                    <div class="modal-text-wrap">
+                        <h3 class="modalText text-center"></h3>
+                        <h4 class="modalInfo-short text-center"></h4>
+                        <p class="modalInfo text-center"></p>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL END-->
+
 {% endblock %}
+
+
+
+<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 spec text-center">
+        {% thumbnail spec.image "150x150" crop="center" as im %}
+            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+        {% endthumbnail %}
+
+
+
+        <!--<img src="{{ spec.image.url }}" width="200" class="img-responsive" alt="">-->
+        <h3>{{spec.name}}</h3>
+        <h4>{{ spec.desc_short }}</h4>
+        <!--<p>{{ spec.desc }}</p>-->
+
+    </div>

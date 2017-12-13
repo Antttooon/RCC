@@ -1,11 +1,12 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 
 
 class About(models.Model):
     header = models.CharField(max_length=70, verbose_name='Заголовок', blank=True, null=True)
-    text = models.TextField(verbose_name='Текст основной', blank=True, null=True)
+    text = RichTextUploadingField(verbose_name='Текст основной', blank=True, null=True)
     active = models.BooleanField(verbose_name='Использовать', default=True)
 
     def __str__(self):
@@ -18,7 +19,7 @@ class About(models.Model):
 
 class News(models.Model):
     header = models.CharField(max_length=120, verbose_name='Заголовок новостей', blank=True, null=True)
-    text = models.TextField(verbose_name='Текст новостей',blank=True, null=True)
+    text = RichTextUploadingField(verbose_name='Текст новостей',blank=True, null=True)
     img = models.ImageField(upload_to='news', blank=True,null=True, verbose_name='Изображение новости')
     active = models.BooleanField(verbose_name='Использовать', default=True)
 

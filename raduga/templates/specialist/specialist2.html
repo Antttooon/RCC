@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+
+
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+    <!--<div class="container">-->
+    {% for spec in specialists %}
+    
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 spec text-center">
+        {% thumbnail spec.image "150x150" crop="center" as im %}
+            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+        {% endthumbnail %}
+
+
+
+        <!--<img src="{{ spec.image.url }}" width="200" class="img-responsive" alt="">-->
+        <h3>{{spec.name}}</h3>
+        <h4>{{ spec.desc_short }}</h4>
+        <!--<p>{{ spec.desc }}</p>-->
+
+    </div>
+    {% endfor %}
+    <!--</div>-->
+
+{% endblock %}
