@@ -5,3 +5,7 @@ raduga/.idea/workspace.xml
 
 raduga/*.sqlite3
 
+
+raduga/db.sqlite3
+
+*.sqlite3

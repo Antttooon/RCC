@@ -5,10 +5,11 @@
 {% block content %}
 <div class="row">
 
-    <div class="text-center">
-        <h1> {{about.header}} </h1>
+    <div>
+
+        {% if about.header %} <h1> {{about.header}} </h1> {% endif %}
         <br>
-        <p> {{about.text}}</p>
+        <p> {{about.text|safe}}</p>
     </div>
 </div>
 <div class="row text-center">
