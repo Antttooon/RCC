@@ -14,11 +14,11 @@ sys.path.insert(1,'/home/a/anttoonru/ALPHATRADETOBACCO.com/RCC/')
 import django
 
 if django.VERSION[1] <= 6:
-    os.environ['DJANGO_SETTINGS_MODULE'] = 'raduga.settings'
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'RCC.raduga.settings'
     import django.core.handlers.wsgi
     application = django.core.handlers.wsgi.WSGIHandler()
 else:
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "raduga.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "RCC.raduga.settings")
     from django.core.wsgi import get_wsgi_application
     try:
         application = get_wsgi_application()
