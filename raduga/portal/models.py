@@ -10,7 +10,10 @@ class About(models.Model):
     active = models.BooleanField(verbose_name='Использовать', default=True)
 
     def __str__(self):
-        return self.header+' '+self.text[0:20]
+        if self.header:
+            return self.header+' '+self.text[0:20]
+        else:
+            return self.text[0:20]
 
     class Meta:
         verbose_name = 'О компании'
