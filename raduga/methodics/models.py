@@ -20,7 +20,7 @@ class Methodics(models.Model):
         return reverse('methodics/'+ str(self.pk))
 
     class Meta:
-        verbose_name = u'Методика'
-        verbose_name_plural = u'Методики'
+        verbose_name = u'Наши услуги'
+        verbose_name_plural = u'Наши услуги'
 
 

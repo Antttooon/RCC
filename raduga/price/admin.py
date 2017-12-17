@@ -4,8 +4,8 @@ from .models import ServicePrice
 
 class ServicePriceAdmin(admin.ModelAdmin):
     search_fields = ['name',]
-    list_display = ['pk','number','name','price','active','consult']
-    list_editable = ['number','price','active','consult']
+    list_display = ['pk','name','price','active','consult']
+    list_editable = ['price','active','consult']
     list_display_links = ['pk','name']
 
 

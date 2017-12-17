@@ -4,7 +4,7 @@ from specialist.models import Specialist
 # Create your models here.
 
 class ServicePrice(models.Model):
-    number = models.PositiveIntegerField(verbose_name='Порядковый номер (уникален)',unique=True, blank=True)
+    # number = models.PositiveIntegerField(verbose_name='Порядковый номер (уникален)',unique=True, blank=True)
     name = models.CharField(max_length=70, verbose_name='Название услуги', blank=True, null=True)
     specialist = models.ForeignKey(Specialist, verbose_name='Специалист', blank=True, null=True)
     desc = models.TextField(verbose_name='Описание', blank=True, null=True)

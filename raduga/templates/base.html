@@ -74,22 +74,22 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="{% url 'main' %} ">О нас</a></li>
 
+              <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Консультации <span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu">-->
+                  <!--{% for cons in consultation_list %}-->
+
+                    <!--<li><a href="{% url 'consultation' cons.id %}">{{cons.name}} {% if cons.desc_short %} - {{cons.desc_short}} {% endif %}</a></li>-->
+                  <!--&lt;!&ndash;<li><a href="{% url 'consultation' 2 %}">Консультации логопеда-дефектолога</a></li>&ndash;&gt;-->
+                  <!--{% endfor %}-->
+
+                  <!--<li role="separator" class="divider"></li>-->
+                  <!--&lt;!&ndash;<li><a href="#">Separated link</a></li>&ndash;&gt;-->
+                <!--</ul>-->
+              <!--</li>-->
+
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Консультации <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  {% for cons in consultation_list %}
-
-                    <li><a href="{% url 'consultation' cons.id %}">{{cons.name}} {% if cons.desc_short %} - {{cons.desc_short}} {% endif %}</a></li>
-                  <!--<li><a href="{% url 'consultation' 2 %}">Консультации логопеда-дефектолога</a></li>-->
-                  {% endfor %}
-
-                  <li role="separator" class="divider"></li>
-                  <!--<li><a href="#">Separated link</a></li>-->
-                </ul>
-              </li>
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Методики <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Наши услуги <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                    {% for methodic in methodic_list %}
 

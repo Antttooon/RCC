@@ -23,9 +23,12 @@
   <div class="carousel-inner" role="listbox">
     {% for news in news_list %}
     <div class="item active">
-
+        {% if news.img %}
       <img src="{{news.img.url}}"  alt="{{news.header}}">
+       {% else %}
+        <img src="{% static 'img/no_news_img.png' %}" alt="">
 
+        {% endif %}
 
       <div class="carousel-caption">
         <div class="news_text">

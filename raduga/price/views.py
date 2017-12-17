@@ -6,3 +6,4 @@ from price.models import ServicePrice
 class Price(ListView):
     model = ServicePrice
     template_name = 'price/price.html'
+    queryset = ServicePrice.objects.filter(active=True)
