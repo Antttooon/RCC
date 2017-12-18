@@ -18,6 +18,9 @@ def main(request):
 
     return render(request, 'index.html', {'title': title,'consult':consult})
 
+def contacts(request):
+    return render(request,'contacts.html')
+
 
 def specialists(request):
     title = 'Cпециалисты'

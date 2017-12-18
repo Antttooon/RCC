@@ -18,7 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.contrib import admin
-from portal.views import main, specialists, ConsultationDetail, MethodicDetail
+from portal.views import main, specialists, ConsultationDetail, MethodicDetail, contacts
 from price.views import Price
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^consultation/(?P<pk>\d+)/$', ConsultationDetail.as_view(), name='consultation'),
     url(r'^methodics/(?P<pk>\d+)/$', MethodicDetail.as_view(), name='methodics'),
     url(r'^price/', Price.as_view(), name='price'),
+    url(r'^contacts/', contacts, name='contacts'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 

@@ -2,7 +2,9 @@ body{
     background: #fdfaf9;
 
 }
-
+.logo{
+    max-width:155%;
+}
 
 
 .navbar-default{

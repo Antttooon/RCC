@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Контакты {% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h3>Контакты</h3>
+        <br>
+        <div class="row">
+            <div class="col-md-5 text-left">
+                <div><h5>Адрес: Улица Федора Абрамова 8 к 1, Санкт-Петербург (метро "Парнас")</h5></div>
+                <br>
+                <div><h5>Тел:<a href="tel:+79643959966">+7 (964) 395-99-66</a></h5></div>
+                <br>
+                
+            </div>
+            <div class="col-md-7">
+                <iframe src="https://yandex.ru/map-widget/v1/-/CBawNETuoC" width="560" height="400" frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
