@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.views.generic import DetailView
 from specialist.models import Specialist
 from price.models import ServicePrice
@@ -51,3 +51,10 @@ class MethodicDetail(DetailView):
     model = Methodics
     context_object_name = 'meth'
     template_name = 'methodics/methodics.html'
+
+
+def robots(request):
+    return render_to_response('robot.txt', content_type="text/plain")
+
+def sitemap(request):
+    return render_to_response('sitemap.txt', content_type="text/plain")

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block title %} Контакты {% endblock %}
@@ -13,9 +14,10 @@
             <div class="col-md-5 text-left">
                 <div><h5>Адрес: Улица Федора Абрамова 8 к 1, Санкт-Петербург (метро "Парнас")</h5></div>
                 <br>
-                <div><h5>Тел:<a href="tel:+79643959966">+7 (964) 395-99-66</a></h5></div>
+                <div><h5>&nbsp;&nbsp;&nbsp;Тел:<a href="tel:+79643959966">+7 (964) 395-99-66</a></h5></div>
                 <br>
-                
+                <div><a href="https://vk.com/club158613108"><img src="{% static 'img/vk_logo.jpeg' %}" width="50" alt=""> Центр "Крылья" </a></div>
+                <br>
             </div>
             <div class="col-md-7">
                 <iframe src="https://yandex.ru/map-widget/v1/-/CBawNETuoC" width="560" height="400" frameborder="0"></iframe>

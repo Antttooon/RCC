@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
+    <meta name="yandex-verification" content="8b94000e473ef2fd" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +38,8 @@
     <!-- /Yandex.Metrika counter -->
 
     <title>{% block title %} {% endblock %}</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="{% static 'img/favicon57.png' %}" />
 
     <!-- Bootstrap -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -73,20 +75,6 @@
 
             <ul class="nav navbar-nav navbar-right">
               <li><a href="{% url 'main' %} ">О нас</a></li>
-
-              <!--<li class="dropdown">-->
-                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Консультации <span class="caret"></span></a>-->
-                <!--<ul class="dropdown-menu">-->
-                  <!--{% for cons in consultation_list %}-->
-
-                    <!--<li><a href="{% url 'consultation' cons.id %}">{{cons.name}} {% if cons.desc_short %} - {{cons.desc_short}} {% endif %}</a></li>-->
-                  <!--&lt;!&ndash;<li><a href="{% url 'consultation' 2 %}">Консультации логопеда-дефектолога</a></li>&ndash;&gt;-->
-                  <!--{% endfor %}-->
-
-                  <!--<li role="separator" class="divider"></li>-->
-                  <!--&lt;!&ndash;<li><a href="#">Separated link</a></li>&ndash;&gt;-->
-                <!--</ul>-->
-              <!--</li>-->
 
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Наши услуги <span class="caret"></span></a>
