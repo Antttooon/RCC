@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
 
+{% block keywords %}специялист, психолог, логопед, дефектолог, развитие, дефекты, патологии, РАС, РДА, ЗПРР {% endblock %}
+{% block description %} {% for spec in specialists %}{{spec.name}} - {{ spec.desc_short }} , {% endfor %}{% endblock %}
 
 {% block title %} {{ title }} {% endblock %}
 {% block content %}
+<section class="content">
+
     <!--<div class="container">-->
     {% for spec in specialists %}
         <div class="col-md-4 col-sm-4 col-xs-6 elem">
@@ -59,7 +63,7 @@
         </div>
     </div>
     <!--MODAL END-->
-
+</section>
 {% endblock %}
 
 

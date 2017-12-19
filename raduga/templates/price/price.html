@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
-
+{% block keywords %}услуги, консультация, детский, психолог, занятия, логопед, крылья{% endblock %}
+{% block description %} {% for item in object_list %}{{item.name}}, {% endfor %}{% endblock %}
 {% block title %} Цены на услуги {% endblock %}
 
 
 {% block content %}
+<section class="content">
 <div class="">
     <h3>Услуги</h3>
 
@@ -28,4 +30,5 @@
         {% endfor %}
     </table>
 </div>
+    </section>
 {% endblock %}

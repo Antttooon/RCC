@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
-
+{% block keywords %}специалист, коррекция, дисграфия, дислексия, дизорфография, ребенок, методика, массаж, логопед. психолог, нарушенияе, терапия{% endblock %}
+{% block description %} Работа с детьми -   {{meth.name}} {% endblock %}
 {% block title %} {{meth.name}} {% endblock %}
 
 {% block content %}
+<section class="content">
     <div class="col-md-12 text-center">
 
         <h1>  {{meth.name}} </h1>
@@ -29,5 +31,5 @@
         {% endif %}
     </div>
 
-
+</section>
 {% endblock %}
